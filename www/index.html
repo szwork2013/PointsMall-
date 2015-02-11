@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
+    <link href="lib/ionic/scss/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/controllers/mall.ctrl.js"></script>
+    <script type="text/javascript" src="js/controllers/mall-list.ctrl.js"></script>
+    <script type="text/javascript" src="js/controllers/mall-detail.ctrl.js"></script>
+    <script type="text/javascript" src="js/controllers/mall-exchange.ctrl.js"></script>
+    <script type="text/javascript" src="js/services/main.sev.js"></script>
+
+
+
+  </head>
+  <body ng-app="pointMall"  ng-controller="MallCtrl" class="mall">
+        <ion-nav-view> </ion-nav-view>
+  </body>
+</html>

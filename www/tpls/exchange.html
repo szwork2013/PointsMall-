@@ -1,0 +1,45 @@
+
+<ion-view >
+    <div class="bar bar-header bar-positive">
+        <button class="button button-icon icon ion-ios7-arrow-back"  ng-click="$root.go('mall.list')">  </button>
+        <h1 class="title">兑换纪录</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header">
+
+        <!-- 下拉刷新 -->
+        <ion-refresher  pulling-text="" on-refresh="refresh()"  refreshing-icon="ion-loading-d"></ion-refresher>
+
+
+        <div class="list">
+            <a class="item item-thumbnail-left item-icon-right" href="#/mall/detail">
+                <img src="img/product/phone/10rmb.png">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+                <i class="icon ion-chevron-right  f18  color-gray"></i>
+            </a>
+
+            <a class="item item-thumbnail-left item-icon-right" href="#/mall/detail">
+                <img src="img/product/phone/10rmb.png">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+                <i class="icon ion-chevron-right  f18  color-gray"></i>
+            </a>
+
+            <a class="item item-thumbnail-left item-icon-right" href="#/mall/detail">
+                <img src="img/product/phone/10rmb.png">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+                <i class="icon ion-chevron-right  f18  color-gray"></i>
+            </a>
+
+
+        </div>
+
+        <!-- 上拉加载 -->
+        <!--<ion-infinite-scroll    icon="ion-ios7-reloading"  on-infinite="loadMoreData()" distance="100%"></ion-infinite-scroll>-->
+
+    </ion-content>
+
+</ion-view>

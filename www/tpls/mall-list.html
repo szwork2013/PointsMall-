@@ -1,0 +1,103 @@
+
+
+
+<ion-view >
+
+
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-icon icon ion-ios7-arrow-back">  </button>
+        <h1 class="title">知了商城</h1>
+    </ion-header-bar>
+
+
+
+
+
+
+    <!--内容区-->
+    <ion-content scroll="y" class="has-header">
+
+        <!-- slide box -->
+        <ion-slide-box
+                on-slide-changed="slideChanged($index)"
+                scroll="true"
+                show-pager='true'
+                slide-interval="3000"
+                auto-play="false">
+            <ion-slide>
+                <div>
+                    <a  class="block" >
+                        <img class="full-image" src="img/banner/banner01.jpg" >
+                    </a>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <div>
+                    <a  class="block">
+                        <img class="full-image" src="img/banner/banner01.jpg" >
+                    </a>
+                </div>
+            </ion-slide>
+
+        </ion-slide-box>
+        <!-- slide box -->
+
+        <!-- 选择导航区 -->
+        <!--<div class="row ">-->
+            <!--<div class="col  col-50">.col</div>-->
+            <!--<div class="col  col-50">.col</div>-->
+        <!--</div>-->
+        <!--<div class="row ">-->
+            <!--<div class="col  col-50">.col</div>-->
+            <!--<div class="col  col-50">.col</div>-->
+        <!--</div>-->
+
+        <section>
+            <div class="row  mall-nav">
+                <div class="col col-50 text-center">
+                    <a href="" class="block">
+                        我的活跃值<span class="color-og value"> 1180</span>
+                    </a>
+                </div>
+                <div class="col col-50 text-center">
+                    <a href="#/mall/exchange" class="block">
+                       兑换明细
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section>
+
+            <div class="clearfix mall-icon">
+                <div class=" float_two" ng-repeat="post in posts">
+                    <a href="javascript:void(0);" ng-click="goDetail(post);"  class="block text-center">
+                        <div class="">
+                            <img  ng-src="{{post.icon}}" class="" width="100" />
+                        </div>
+                        <div>
+                            <h5 class="mail-name">{{post.name}}</h5>
+                        </div>
+                        <div>
+                            <span class="mail-point">{{post.point}}</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+    </ion-content>
+
+
+
+
+
+</ion-view>

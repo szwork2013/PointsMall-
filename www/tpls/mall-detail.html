@@ -1,0 +1,61 @@
+
+<ion-view  >
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon icon ion-ios7-arrow-back"  ng-click="$root.go('mall.list')">  </button>
+        <h1 class="title">商品详情</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header detail">
+
+        <div>
+            <img  ng-src="{{post.iconDetail}}" class="full-image" />
+        </div>
+
+        <div class="detail-header">
+            <h3>{{post.type}}</h3>
+                <span class="color-og">
+                    使用时间:&emsp;兑换之日起至{{post.time}}有效
+                </span>
+        </div>
+        <section class="detail-body">
+            <div>
+                <ul class="list">
+                    <li>
+                        <label>使用范围:</label>
+                        <span> {{post.range}}</span>
+                    </li>
+                    <li>
+                        <label>到账时间:</label>
+                        <span> {{post.arrtive}}</span>
+                    </li>
+                    <li>
+                        <label class="" style=" float: left;">兑换流程:</label>
+                        <span class="detail-wrap-text"> {{post.exchange}}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tips">
+            <span class="color-og">
+                知了节省您的精力！由我们实时服务为您充值，您只需在收到短信提醒后动动手指头查看兑换状态即可。
+            </span>
+            </div>
+
+        </section>
+
+
+
+    </ion-content>
+    <div class="detail-change clearfix" style="position: fixed; bottom: 0px; width: 100%;">
+        <div class="pull-left">
+            <span class="color-og pointMs"><i class="ib point"></i>3000</span>
+        </div>
+
+        <div class="pull-right">
+            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')">不足兑换</button>
+        </div>
+
+    </div>
+</ion-view>
