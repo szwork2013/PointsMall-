@@ -35,9 +35,14 @@ PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$s
         },2000);
     }
 
-    $scope.loadMoreData = function(){
-        console.log("dd");
-        $scope.loadList();
+    $scope.loadMore = function(){
+
+            console.log("dd");
+
+        $scope.$apply(function(){
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+        });
+
     }
 
     $scope.loadList();

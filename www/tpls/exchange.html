@@ -13,10 +13,11 @@
 
         <div class="list exchangeList">
             <a class="item item-thumbnail-left item-icon-right" href="#/mall/detail" ng-repeat="post in posts">
+            <!--<a class="item item-thumbnail-left item-icon-right" href="#/mall/detail" ng-repeat="post in posts">-->
                 <img  ng-src="{{post.image}}"  class="full-image"      />
                 <h2 class="exchangeName">{{post.productionName}}</h2>
                 <div>
-                        <i class="ib point-expired" style="margin-right: 7px;"></i><span class="mail-point color-gray-light">{{post.credit}}</span>
+                        <i class="ib point-expired" ></i><span class="mail-point color-gray-light">{{post.credit}}</span>
                 </div>
                 <div>
                     <span class="ib exchangeStatus "  ng-class="{'color-og':post.status=='0','color-gray-light' : post.status == '1'  }">{{post.status |  exchangeStatus}}</span>
@@ -27,8 +28,11 @@
         </div>
 
         <!-- 上拉加载 -->
-        <!--<ion-infinite-scroll      on-infinite="loadMoreData()"  distance="1"  ></ion-infinite-scroll>-->
+        <!--<ion-infinite-scroll    icon="ion-ios7-reloading"  on-infinite="loadMore()" distance="1%">-->
+        <!--</ion-infinite-scroll>-->
 
     </ion-content>
+
+
 
 </ion-view>

@@ -1,20 +1,22 @@
-
+@charset "utf-8";
 //过期 积分
 .point-expired{
-  background-size:  10px  10px;
-  width: 10px;
-  height: 10px;
+  background-size:  15px  15px;
+  width: 15px;
+  height: 15px;
   background-image: url("../img/icon/point-expired.png");
-  background-image: url("../img/icon/point-expired.svg") , none;
+  background-image: url("../img/icon/point-expired.svg"),none;
+  vertical-align: middle;
 }
 
 //当前积分
 .point{
-
-  background-size:  10px  10px;
-  width: 10px;
-  height: 10px;
+  background-size:  15px  15px;
+  width: 15px;
+  height: 15px;
   background-image: url("../img/icon/point.png");
+  background-image: url("../img/icon/point.svg"),none;
+  vertical-align: middle;
 }
 
 //商店
@@ -23,5 +25,5 @@
   width: 18.5px;
   height: 17.5px;
   background-image: url("../img/icon/shop.png");
-  background-image: url("../img/icon/shop.svg") , none;
+//  background-image: url("../img/icon/shop.svg"),none;
 }

@@ -7,6 +7,7 @@ PointMall.controller("MallListCtrl",function($state,$rootScope,$scope,Util,MallS
         queryTime : 0
     }
 
+
     //加载列表
     $scope.loadList = function(){
 

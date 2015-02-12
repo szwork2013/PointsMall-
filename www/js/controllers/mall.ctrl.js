@@ -1,10 +1,8 @@
-PointMall.controller("MallCtrl",function($state,$stateParams,$rootScope,MallSev){
+PointMall.controller("MallCtrl",function($state,$stateParams,$scope,$rootScope,MallSev){
 
         //加载token
 //        $rootScope.token = $stateParams.token;
-
       console.log($stateParams);
-
         $rootScope.token = "251ad9b65d4a79fcd2d09a244f01ea8a";
         $rootScope.user = {
             credit : ""
@@ -25,6 +23,14 @@ PointMall.controller("MallCtrl",function($state,$stateParams,$rootScope,MallSev)
         }
 
 
+        //计算banner宽高比
+        var screenWidth =  document.body.clientWidth;
+        var bannerScale = 750/340;
+        $scope.bannerHeight = screenWidth / bannerScale;
+
+
+
+        //获得用户活跃
         var  getUser = function(token){
             MallSev.getUserCreadit(token).then(function(res){
                $rootScope.user.credit =  res.bizData.credit;
@@ -34,7 +40,6 @@ PointMall.controller("MallCtrl",function($state,$stateParams,$rootScope,MallSev)
 
         //获得用户列表
         getUser($rootScope.token);
-
 
     $rootScope.goCicadaBack = function(){
         window.cicadaStore.back()
