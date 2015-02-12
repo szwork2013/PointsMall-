@@ -10,13 +10,13 @@
     <ion-content class="has-header detail">
 
         <div>
-            <img  ng-src="{{post.iconDetail}}" class="full-image" />
+            <img  ng-src="{{post.bigImage}}" class="full-image" />
         </div>
 
         <div class="detail-header">
-            <h3>{{post.type}}</h3>
+            <h3>{{post.productionName}} {{post.type}}</h3>
                 <span class="color-og">
-                    使用时间:&emsp;兑换之日起至{{post.time}}有效
+                    兑换截止日期:&emsp;{{post.comment.time}}
                 </span>
         </div>
         <section class="detail-body">
@@ -24,24 +24,29 @@
                 <ul class="list">
                     <li>
                         <label>使用范围:</label>
-                        <span> {{post.range}}</span>
+                        <span> {{post.comment.range}}</span>
                     </li>
                     <li>
                         <label>到账时间:</label>
-                        <span> {{post.arrtive}}</span>
+                        <span> {{post.comment.arrtive}}</span>
                     </li>
                     <li>
                         <label class="" style=" float: left;">兑换流程:</label>
-                        <span class="detail-wrap-text"> {{post.exchange}}</span>
+                        <span class="detail-wrap-text"> {{post.comment.exchange}}</span>
+                    </li>
+
+                    <li>
+                        <label class="" style=" float: left;">备注:</label>
+                        <span class="detail-wrap-text"> {{post.comment.desc}}</span>
                     </li>
                 </ul>
             </div>
 
-            <div class="tips">
-            <span class="color-og">
-                知了节省您的精力！由我们实时服务为您充值，您只需在收到短信提醒后动动手指头查看兑换状态即可。
-            </span>
-            </div>
+            <!--<div class="tips">-->
+            <!--<span class="color-og">-->
+                <!--知了节省您的精力！由我们实时服务为您充值，您只需在收到短信提醒后动动手指头查看兑换状态即可。-->
+            <!--</span>-->
+            <!--</div>-->
 
         </section>
 
@@ -50,11 +55,16 @@
     </ion-content>
     <div class="detail-change clearfix" style="position: fixed; bottom: 0px; width: 100%;">
         <div class="pull-left">
-            <span class="color-og pointMs"><i class="ib point"></i>3000</span>
+            <span class="color-og pointMs">
+                <i class="ib point" style="margin-right: 8px;"></i>
+                <span>{{post.credit}}</span>
+            </span>
         </div>
 
         <div class="pull-right">
-            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  disabled>不足兑换</button>
+            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  ng-disabled="notExchange">
+                {{isExchangeMsg}}
+            </button>
         </div>
 
     </div>

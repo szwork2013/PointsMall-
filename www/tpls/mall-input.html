@@ -10,14 +10,14 @@
     <!--内容区-->
     <ion-content class="has-header bg-gray" scroll="false">
 
-            <form  role="form"   name="inputForm" novalidate>
+            <form  role="form"   name="inputForm"  novalidate>
 
                 <div class="form-group">
                     <label class="form-title">
                         输入手机号
                     </label>
                     <div>
-                        <input type="text"  class="form-text item-input"  placeholder="13991877654" />
+                        <input type="text"  class="form-text item-input"  placeholder="手机号"   ng-model="fm.phone" required/>
                     </div>
 
                     <div class="form-tips text-right helper">
@@ -25,9 +25,8 @@
                     </div>
                 </div>
 
-
                 <div class="text-center">
-                    <button class="button button-energized ca-bg" ng-click="$root.go('mall.exchange')">加入</button>
+                    <button class="button button-energized ca-bg" ng-click="exchange();" ng-disabled="inputForm.$invalid || isSubmit ">加入</button>
                 </div>
             </form>
 

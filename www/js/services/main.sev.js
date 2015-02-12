@@ -23,8 +23,105 @@ PointMall
             }
 
         }
+    })
 
+    .factory("MallSev",function($http,$q,SERVER){
+
+        var  MallSev  =  {
+
+            //获得商品列表
+            getProduct : function(token,queryTime){
+                var defer = $q.defer();
+               $http.post(SERVER.url.mall+"/credit/getProductionList",{
+                   "style" : "",
+                   "clientInfo" : {},
+                   "data" : {
+                       "token" : token,
+                       "queryTime" : queryTime
+                   }
+               }).success(function(res){
+                    defer.resolve(res);
+               }).error(function(error){
+                    defer.reject(error);
+               });
+
+                return defer.promise;
+
+            },
+
+
+            //兑换
+            exchange : function(token,productionId,phone){
+                var defer = $q.defer();
+                $http.post(SERVER.url.mall+"/credit/exchangeProduction",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "token" : token,
+                        "productionId" : productionId,
+                        "coment" : phone
+                    }
+                }).success(function(res){
+                    defer.resolve(res);
+                }).error(function(error){
+                    defer.reject(error);
+                });
+
+                return defer.promise;
+            },
+
+            //获得兑换列表
+            getExchange : function(token,queryTime){
+                var defer = $q.defer();
+                $http.post(SERVER.url.mall+"/credit/queryExchangeProductionListByUserId",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "token" : token,
+                        "queryTime" : queryTime
+                    }
+                }).success(function(res){
+                    defer.resolve(res);
+                }).error(function(error){
+                    defer.reject(error);
+                });
+
+                return defer.promise;
+            },
+
+            //获得用户积分
+            getUserCreadit : function(token){
+                var defer = $q.defer();
+                $http.post(SERVER.url.mall+"/credit/getUserCreditByUserId",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "token" : token
+                    }
+                }).success(function(res){
+                    defer.resolve(res);
+                }).error(function(error){
+                    defer.reject(error);
+                });
+                return defer.promise;
+            }
+
+        };
+
+        return MallSev;
 
     })
 
+.filter("exchangeStatus",function(){
+        return function(status) {
+            if (status == 0) {
+                return "进行中";
+            }
+            else {
+                return "已完成";
+            }
+        }
+
+
+ });
 

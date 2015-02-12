@@ -41,12 +41,11 @@
             <!--<img   src="img/banner/banner01.jpg" class="full-image" />-->
         <!--</div>-->
 
-
         <section>
             <div class="row  mall-nav">
                 <div class="col col-50 text-center">
                     <a href="" class="block"  ng-click="$root.goCicadaVal();">
-                        我的活跃值<span class="color-og value"> 1180</span>
+                        我的活跃值<span class="color-og value"> {{$root.user.credit}}</span>
                     </a>
                 </div>
                 <div class="col col-50 text-center">
@@ -66,17 +65,17 @@
                     <a href="javascript:void(0);" ng-click="goDetail(post);"  class="block">
                         <section class="mail-base">
                             <div class="">
-                                <img  ng-src="{{post.icon}}" class="" width="100" />
+                                <img  ng-src="{{post.mediumImage}}" class="" width="100" />
                             </div>
                             <div>
-                                <h5 class="mail-name">{{post.name}}</h5>
+                                <h5 class="mail-name">{{post.productionName}}</h5>
                             </div>
                             <div>
                                 <!--<div class="ib">-->
                                     <!--<i class="ib point-expired"></i><span class="mail-point color-gary">{{post.point}}</span>-->
                                 <!--</div>-->
                                 <div class="ib">
-                                    <i class="ib point"></i><span class="mail-point">{{post.point}}</span>
+                                    <i class="ib point"></i><span class="mail-point">{{post.credit}}</span>
                                 </div>
 
                             </div>
