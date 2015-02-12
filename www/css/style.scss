@@ -8,6 +8,8 @@
 
 
 
+
+
 /*
  * 浮动布局
  * 提供 2,3,4,5,6列的布局
@@ -29,7 +31,9 @@
 .row{
   padding: 0 ;
 }
-
+.ib{
+  display: inline-block;
+}
 .bg-gray{
   background: #f6f6f6;
 }
@@ -48,9 +52,14 @@ a{
 .color-gray{
   color: #e3e3e6;
 }
+.color-
+
 .f18:before{
   font-size: 18px;
 }
+
+
+//知了button设计
 
 button.ca-sm{
    font-size: 15px;
@@ -74,6 +83,14 @@ button.ca-bg{
   min-height: rem(88px);
   border-radius: 4px;
 }
+
+button:disabled{
+  background-color: #aaaaaa !important;
+  border-color: #aaaaaa !important;
+  opacity: 1 !important;
+}
+
+
 
 
 .mall{
@@ -106,6 +123,11 @@ button.ca-bg{
      padding-top: rem(64px);
      padding-bottom: rem(41px);
      border-bottom: 1px solid #e8e8e8;
+
+     //最小高度
+     min-height: 178px;
+     position: relative;
+
    }
   .float_two:nth-child(2n) a{
     border-left: 1px solid #e8e8e8;
@@ -114,11 +136,21 @@ button.ca-bg{
   .mail-name{
     font-size: 16px;
     font-weight: bold;
+    color: #494949;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .mail-base{
+    display: inline-block;
+    text-align: left;
   }
 
   .mail-point{
     font-size: 14px;
     color: #f69e47;
+
+    margin-left: 7.5px;
   }
 
 }
@@ -153,9 +185,10 @@ button.ca-bg{
   }
   .detail-wrap-text{
     display: block;
-    margin-left: 92px;
+    margin-left: 87px;
     position: relative;
     top: 2px;
+
   }
 
 
@@ -241,3 +274,14 @@ button.ca-bg{
 
 }
 
+
+.shop-main{
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  width: 100%;
+}
+
+
+
+@import "icon";

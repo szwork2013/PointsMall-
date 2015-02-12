@@ -3,7 +3,7 @@
 
 <ion-view >
     <ion-header-bar align-title="center" class="bar-positive">
-        <button class="button button-icon icon ion-ios7-arrow-back">  </button>
+        <button class="button button-icon icon ion-ios7-arrow-back" ng-click="$root.goCicadaBack();">  </button>
         <h1 class="title">知了商城</h1>
     </ion-header-bar>
 
@@ -45,7 +45,7 @@
         <section>
             <div class="row  mall-nav">
                 <div class="col col-50 text-center">
-                    <a href="" class="block">
+                    <a href="" class="block"  ng-click="$root.goCicadaVal();">
                         我的活跃值<span class="color-og value"> 1180</span>
                     </a>
                 </div>
@@ -60,18 +60,42 @@
 
         <section>
 
+
             <div class="clearfix mall-icon">
                 <div class=" float_two" ng-repeat="post in posts">
-                    <a href="javascript:void(0);" ng-click="goDetail(post);"  class="block text-center">
-                        <div class="">
-                            <img  ng-src="{{post.icon}}" class="" width="100" />
+                    <a href="javascript:void(0);" ng-click="goDetail(post);"  class="block">
+                        <section class="mail-base">
+                            <div class="">
+                                <img  ng-src="{{post.icon}}" class="" width="100" />
+                            </div>
+                            <div>
+                                <h5 class="mail-name">{{post.name}}</h5>
+                            </div>
+                            <div>
+                                <!--<div class="ib">-->
+                                    <!--<i class="ib point-expired"></i><span class="mail-point color-gary">{{post.point}}</span>-->
+                                <!--</div>-->
+                                <div class="ib">
+                                    <i class="ib point"></i><span class="mail-point">{{post.point}}</span>
+                                </div>
+
+                            </div>
+                        </section>
+                    </a>
+                </div>
+
+
+                <!--期待-->
+                <div class=" float_two" >
+                    <a href="javascript:void(0);"   class="block text-center">
+                        <div class="shop-main">
+                            <i class="ib shop"></i>
+                            <div>
+                                <span style="color: #d1d1d1">敬请期待</span>
+                            </div>
                         </div>
-                        <div>
-                            <h5 class="mail-name">{{post.name}}</h5>
-                        </div>
-                        <div>
-                            <span class="mail-point">{{post.point}}</span>
-                        </div>
+
+
                     </a>
                 </div>
 
