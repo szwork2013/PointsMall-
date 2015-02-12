@@ -64,7 +64,7 @@ PointMall.run(function ($ionicPlatform) {
     //设置SEVER地址
     .constant('SERVER', {
         url: {
-//            mall: "http://172.16.130.43:8086/credit"
-            mall: "/credit"
+            mall: "http://172.16.130.43:8086/credit"
+//            mall: "/credit"
         }
     })
