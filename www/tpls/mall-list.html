@@ -8,39 +8,39 @@
     </ion-header-bar>
 
 
+    <!-- slide box -->
+    <ion-slide-box  class="has-header"
+            on-slide-changed="slideChanged($index)"
+            scroll="true"
+            show-pager='true'
+            slide-interval="3000"
+            auto-play="false">
+        <ion-slide>
+            <div>
+                <a  class="block" >
+                    <img class="full-image" src="img/banner/banner01.jpg" >
+                </a>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div>
+                <a  class="block">
+                    <img class="full-image" src="img/banner/banner01.jpg" >
+                </a>
+            </div>
+        </ion-slide>
+
+    </ion-slide-box>
+    <!-- slide box -->
 
 
     <!--内容区-->
-    <ion-content   class="has-header"  scroll="y">
+    <ion-content   class="has-header"  scroll="y" style="margin-top: 146px;">
         <!--<div>-->
             <!--<img   src="img/banner/banner01.jpg" class="full-image" />-->
         <!--</div>-->
 
-        <!-- slide box -->
-        <ion-slide-box
-                on-slide-changed="slideChanged($index)"
-                scroll="true"
-                show-pager='true'
-                slide-interval="3000"
-                auto-play="false">
-            <ion-slide>
-                <div>
-                    <a  class="block" >
-                        <img class="full-image" src="img/banner/banner01.jpg" >
-                    </a>
-                </div>
-            </ion-slide>
-
-            <ion-slide>
-                <div>
-                    <a  class="block">
-                        <img class="full-image" src="img/banner/banner01.jpg" >
-                    </a>
-                </div>
-            </ion-slide>
-
-        </ion-slide-box>
-        <!-- slide box -->
 
         <section>
             <div class="row  mall-nav">
