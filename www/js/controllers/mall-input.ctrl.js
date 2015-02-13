@@ -11,6 +11,8 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$scope,Util,Mall
     $scope.isSubmit = false;
 
 
+
+
     //加载列表
     $scope.exchange = function(){
         $scope.isSubmit = true;
@@ -18,6 +20,10 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$scope,Util,Mall
             console.log(res);
             if(res.rtnCode == "0000000"){
                 alert("兑换成功!");
+
+                $rootScope.getUser($rootScope.token);
+
+                $state.go("mall.exchange");
             }
             else{
                 alert(res.msg);

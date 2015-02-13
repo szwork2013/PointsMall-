@@ -44,7 +44,9 @@
             <div class="row  mall-nav">
                 <div class="col col-50 text-center">
                     <a href="" class="block"  ng-click="$root.goCicadaVal();">
-                        我的活跃值<span class="color-og value"> {{$root.user.credit}}</span>
+                        我的活跃值
+                        <span class="color-og value ib" ng-hide="$root.isLoadingVal"> {{$root.user.credit}}</span>
+                        <i class="ion-loading-d icon color-og" ng-show="$root.isLoadingVal"></i>
                     </a>
                 </div>
                 <div class="col col-50 text-center">

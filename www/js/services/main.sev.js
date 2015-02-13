@@ -48,8 +48,22 @@ PointMall
                 return defer.promise;
 
             },
+            getProductDetail : function(productionId){
+                var defer = $q.defer();
+                $http.post(SERVER.url.mall+"/credit/queryProductionDetailById",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "productionId": productionId
+                    }
+                }).success(function(res){
+                    defer.resolve(res);
+                }).error(function(error){
+                    defer.reject(error);
+                });
 
-
+                return defer.promise;
+            },
             //兑换
             exchange : function(token,productionId,phone){
                 var defer = $q.defer();

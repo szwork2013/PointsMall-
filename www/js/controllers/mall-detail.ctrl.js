@@ -3,11 +3,11 @@ PointMall.controller("MallDetailCtrl",function($state,$stateParams,$scope,$rootS
         product.comment =  JSON.parse(product.comment);
         $scope.post = product;
 
+        console.log("loadiing...");
 
      //兑换状态
      $scope.notExchange = true;
      $scope.isExchangeMsg = "不足兑换";
-
 
 
     if($rootScope.user.credit   -  product.credit  >= 0){

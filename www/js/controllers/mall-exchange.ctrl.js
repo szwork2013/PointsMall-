@@ -9,20 +9,30 @@ PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$s
         "queryTime" : 0
     }
 
-    $scope.loadList = function(){
-        MallSev.getExchange($rootScope.token, $scope.fm.queryTime).then(function(res){
 
-            $scope.$broadcast('scroll.infiniteScrollComplete');
+    $scope.isSubmit = false;
 
+    //获得商品详情
+    $scope.getDetail = function(obj){
+        obj.isSubmit = true;
+
+        MallSev.getProductDetail(obj.productionId).then(function(res){
+            console.log(res);
             if(res.rtnCode == "0000000"){
-                $scope.posts = res.bizData;
+                Util.setSgObj("product",res.bizData);
+                 obj.isSubmit = false;
+                $timeout(function(){
+                    $state.go("mall.detail");
+                },300);
+
+                return;
             }
             else{
                 alert(res.msg);
             }
-            console.log(res);
+            obj.isSubmit = false;
         },function(err){
-
+            obj.isSubmit = false;
         });
     }
 
@@ -30,20 +40,28 @@ PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$s
 
     //刷新
     $scope.refresh = function () {
-        $timeout(function(){
+
+        MallSev.getExchange($rootScope.token, $scope.fm.queryTime).then(function(res){
             $scope.$broadcast('scroll.refreshComplete');
-        },2000);
+
+            if(res.rtnCode == "0000000"){
+                $scope.posts = res.bizData;
+            }
+            else{
+                alert(res.msg);
+            }
+        },function(err){
+            $scope.$broadcast('scroll.refreshComplete');
+        });
     }
 
     $scope.loadMore = function(){
-
-            console.log("dd");
-
         $scope.$apply(function(){
             $scope.$broadcast('scroll.infiniteScrollComplete');
         });
 
     }
 
-    $scope.loadList();
+    $scope.refresh();
+
 });

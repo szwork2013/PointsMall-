@@ -1,9 +1,28 @@
-PointMall.controller("MallCtrl",function($state,$stateParams,$scope,$rootScope,MallSev){
+PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$timeout,$rootScope,MallSev){
+        console.log($location.$$url);
 
-        //加载token
-//        $rootScope.token = $stateParams.token;
-      console.log($stateParams);
-        $rootScope.token = "251ad9b65d4a79fcd2d09a244f01ea8a";
+        //获得token
+        var token;
+        if($location.$$absUrl.indexOf("#") ==  -1){
+            token = $location.$$absUrl.substring($location.$$absUrl.indexOf("token"),$location.$$absUrl.length);
+
+        }
+        else{
+            token =  $location.$$absUrl.substring($location.$$absUrl.indexOf("token"),$location.$$absUrl.indexOf("#"));
+        }
+
+        if(!token){
+            alert("token为空!");
+            return;
+        }
+
+
+        $rootScope.isLoadingVal = false;
+        $rootScope.token = token.split("=")[1];
+//        $rootScope.token = "251ad9b65d4a79fcd2d09a244f01ea8a";
+
+        console.log($rootScope.token);
+
         $rootScope.user = {
             credit : ""
         }
@@ -30,16 +49,22 @@ PointMall.controller("MallCtrl",function($state,$stateParams,$scope,$rootScope,M
 
 
 
+
         //获得用户活跃
-        var  getUser = function(token){
+        $rootScope.getUser = function(token){
+            $rootScope.isLoadingVal = true;
             MallSev.getUserCreadit(token).then(function(res){
-               $rootScope.user.credit =  res.bizData.credit;
+                    $rootScope.isLoadingVal = false;
+                    $rootScope.user.credit =  res.bizData.credit;
+
             },function(err){
+                $rootScope.isLoadingVal = false;
             });
         }
 
+
         //获得用户列表
-        getUser($rootScope.token);
+    $rootScope.getUser($rootScope.token);
 
     $rootScope.goCicadaBack = function(){
         window.cicadaStore.back()
