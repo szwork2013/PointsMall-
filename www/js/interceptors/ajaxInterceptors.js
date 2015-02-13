@@ -20,6 +20,7 @@ PointMall
 //                        }
 //                    }
 //                }
+
                 return config ;
             },
 

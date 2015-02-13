@@ -6,7 +6,7 @@
     </div>
 
     <!--内容区-->
-    <ion-content class="has-header">
+    <ion-content class="has-header"    on-infinite="loadMore()">
 
 
         <!-- 下拉刷新 -->
@@ -24,15 +24,15 @@
                     <span class="ib exchangeStatus "  ng-class="{'color-og':post.status=='0','color-gray-light' : post.status == '1'  }">{{post.status |  exchangeStatus}}</span>
                 </div>
 
-                <i class="icon ion-chevron-right  f18  color-gray" ng-hide="post.isSubmit"></i>
+                <i class="  icon ion-chevron-right  f18  color-gray" ng-hide="post.isSubmit"></i>
                 <i class=" ion-loading-d icon f18" ng-show="post.isSubmit"></i>
             </a>
 
         </div>
 
         <!-- 上拉加载 -->
-        <!--<ion-infinite-scroll    icon="ion-ios7-reloading"  on-infinite="loadMore()" distance="1%">-->
-        <!--</ion-infinite-scroll>-->
+        <ion-infinite-scroll    icon="ion-ios7-reloading"  distance="1%">
+        </ion-infinite-scroll>
 
     </ion-content>
 

@@ -1,4 +1,4 @@
-PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$timeout,$rootScope,MallSev){
+PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$timeout,$rootScope,$ionicPopup,MallSev){
         console.log($location.$$url);
 
         //获得token
@@ -40,6 +40,19 @@ PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$t
             window.cicadaStore.gotoActiveValue();
 
         }
+
+        //全局弹出
+        $rootScope.alert = function(title,template){
+            $ionicPopup.alert({
+                title : title  || "",
+                template : template,
+                okText : "确定"
+
+            });
+
+        }
+
+
 
 
         //计算banner宽高比

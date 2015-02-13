@@ -124,7 +124,8 @@ button:disabled {
   font-size: 16px;
   color: #f69e47;
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
+  top: 2px;
   margin-left: 7.5px; }
 
 .detail {
@@ -133,7 +134,8 @@ button:disabled {
 .detail-body {
   margin-top: 22px;
   padding-left: 15px;
-  padding-right: 14px; }
+  padding-right: 14px;
+  padding-bottom: 50px; }
   .detail-body .tips {
     margin-bottom: 111.5px; }
   .detail-body ul.list li {
@@ -220,6 +222,10 @@ button:disabled {
 
 .slider-pager-page .ion-record {
   font-size: 10px; }
+
+.t2 {
+  position: relative;
+  top: 2px; }
 
 .point-expired {
   background-size: 15px  15px;

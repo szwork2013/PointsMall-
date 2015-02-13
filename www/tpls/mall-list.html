@@ -38,18 +38,20 @@
         <!--<img   src="img/banner/banner01.jpg" class="full-image" />-->
     <!--</div>-->
     <!--内容区-->
-    <ion-content   class="has-header"  ng-style="{'marginTop':bannerHeight+'px'}">
+    <ion-content   class="has-header"    ng-style="{'marginTop':bannerHeight+'px'}">
 
         <section>
-            <div class="row  mall-nav">
-                <div class="col col-50 text-center">
+            <div class=" clearfix mall-nav">
+
+
+                <div class="float_two text-center">
                     <a href="" class="block"  ng-click="$root.goCicadaVal();">
                         我的活跃值
-                        <span class="color-og value ib" ng-hide="$root.isLoadingVal"> {{$root.user.credit}}</span>
+                        <span class="color-og value " ng-hide="$root.isLoadingVal">{{$root.user.credit}}</span>
                         <i class="ion-loading-d icon color-og" ng-show="$root.isLoadingVal"></i>
                     </a>
                 </div>
-                <div class="col col-50 text-center">
+                <div class="float_two text-center">
                     <a href="#/mall/exchange" class="block">
                        兑换明细
                     </a>
@@ -75,7 +77,7 @@
                                 <!--<div class="ib">-->
                                     <!--<i class="ib point-expired"></i><span class="mail-point color-gary">{{post.point}}</span>-->
                                 <!--</div>-->
-                                <div class="ib">
+                                <div class="">
                                     <i class="ib point"></i><span class="mail-point">{{post.credit}}</span>
                                 </div>
 

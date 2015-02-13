@@ -56,6 +56,7 @@ PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$s
     }
 
     $scope.loadMore = function(){
+        console.log("dd");
         $scope.$apply(function(){
             $scope.$broadcast('scroll.infiniteScrollComplete');
         });
