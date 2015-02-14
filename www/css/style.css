@@ -124,8 +124,6 @@ button:disabled {
   font-size: 16px;
   color: #f69e47;
   display: inline-block;
-  position: relative;
-  top: 2px;
   margin-left: 7.5px; }
 
 .detail {
@@ -227,21 +225,23 @@ button:disabled {
   position: relative;
   top: 2px; }
 
+.D3 {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
+
 .point-expired {
   background-size: 15px  15px;
   width: 15px;
   height: 15px;
   background-image: url("../img/icon/point-expired.png");
-  background-image: url("../img/icon/point-expired.svg"), none;
-  vertical-align: middle; }
+  background-image: url("../img/icon/point-expired.svg"), none; }
 
 .point {
   background-size: 15px  15px;
   width: 15px;
   height: 15px;
   background-image: url("../img/icon/point.png");
-  background-image: url("../img/icon/point.svg"), none;
-  vertical-align: middle; }
+  background-image: url("../img/icon/point.svg"), none; }
 
 .shop {
   background-size: 18.5px 17.5px;

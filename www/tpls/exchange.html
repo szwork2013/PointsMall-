@@ -1,13 +1,13 @@
 
-<ion-view >
-    <div class="bar bar-header bar-positive">
-        <button class="button button-icon icon ion-ios7-arrow-back"  ng-click="$root.go('mall.list')">  </button>
-        <h1 class="title">兑换纪录</h1>
-    </div>
+
+<ion-view view-title="兑换纪录">
+
+    <ion-nav-buttons>
+        <button class="button button-icon icon ion-ios7-arrow-back"   ng-click="$root.backToView('mall.list');">  </button>
+    </ion-nav-buttons>
 
     <!--内容区-->
-    <ion-content class="has-header"    on-infinite="loadMore()">
-
+    <ion-content class="has-header"  >
 
         <!-- 下拉刷新 -->
         <ion-refresher  pulling-text="" on-refresh="refresh()"  refreshing-icon="ion-loading-d"></ion-refresher>
@@ -18,7 +18,7 @@
                 <img  ng-src="{{post.image}}"  class="full-image"      />
                 <h2 class="exchangeName">{{post.productionName}}</h2>
                 <div>
-                        <i class="ib point-expired" ></i><span class="mail-point color-gray-light">{{post.credit}}</span>
+                        <span class="ib point-expired t2" ></span><span class="mail-point color-gray-light">{{post.credit}}</span>
                 </div>
                 <div>
                     <span class="ib exchangeStatus "  ng-class="{'color-og':post.status=='0','color-gray-light' : post.status == '1'  }">{{post.status |  exchangeStatus}}</span>
@@ -30,9 +30,9 @@
 
         </div>
 
-        <!-- 上拉加载 -->
-        <ion-infinite-scroll    icon="ion-ios7-reloading"  distance="1%">
-        </ion-infinite-scroll>
+        <!--&lt;!&ndash; 上拉加载 &ndash;&gt;-->
+        <!--<ion-infinite-scroll    icon="ion-ios7-reloading"  distance="1%">-->
+        <!--</ion-infinite-scroll>-->
 
     </ion-content>
 

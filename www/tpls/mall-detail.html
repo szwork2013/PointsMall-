@@ -1,10 +1,11 @@
 
-<ion-view  cache-view="false">
 
-    <div class="bar bar-header bar-positive  ">
-        <button class="button button-icon icon ion-ios7-arrow-back"     ng-click="$root.go('mall.list')">  </button>
-        <h1 class="title">商品详情</h1>
-    </div>
+
+
+<ion-view  cache-view="false" view-title="商品详情">
+    <ion-nav-buttons>
+        <button class="button button-icon icon ion-ios7-arrow-back"  ng-click="$root.backToView('mall.list');">  </button>
+    </ion-nav-buttons>
 
     <!--内容区-->
     <ion-content class="has-header detail">
@@ -62,7 +63,8 @@
         </div>
 
         <div class="pull-right">
-            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  ng-disabled="notExchange">
+            <!--<button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  ng-disabled="notExchange">-->
+            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  >
                 {{isExchangeMsg}}
             </button>
         </div>

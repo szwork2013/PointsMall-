@@ -1,5 +1,5 @@
-PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$timeout,$rootScope,$ionicPopup,MallSev){
-        console.log($location.$$url);
+PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$timeout,$rootScope,$ionicPopup,Util,MallSev){
+//        console.log($location.$$url);
 
         //获得token
         var token;
@@ -31,9 +31,14 @@ PointMall.controller("MallCtrl",function($state,$stateParams,$location,$scope,$t
             alert("token失效");
         }
 
-        $rootScope.go = function(stateName){
-            $state.go(stateName);
+        //返回某个state
+        $rootScope.backToView = function(stateName){
+          Util.backToView(stateName);
         }
+
+    $rootScope.go = function(stateName){
+        $state.go(stateName);
+    }
 
         $rootScope.goCicadaVal = function(){
             console.log(window.cicadaStore);

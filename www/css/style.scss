@@ -155,14 +155,14 @@ button:disabled{
   }
 
 
-
 }
 .mail-point{
   font-size: 16px;
   color: #f69e47;
   display: inline-block;
-  position: relative;
-  top: 2px;
+//  position: relative;
+//  top: 2px;
+//  vertical-align: middle;
   margin-left: 7.5px;
 }
 .detail{
@@ -321,6 +321,11 @@ button:disabled{
 .t2{
   position: relative;
   top: 2px;
+}
+
+.D3{
+  -webkit-transform: translate3d(0px, 0px, 0px);
+   transform: translate3d(0px, 0px, 0px);
 }
 
 @import "icon";

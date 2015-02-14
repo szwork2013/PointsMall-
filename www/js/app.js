@@ -1,5 +1,9 @@
 var PointMall = angular.module('pointMall', ['ionic']);
 
+PointMall.config(function($ionicConfigProvider) {
+//    if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
+})
+
 PointMall.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -65,7 +69,7 @@ PointMall.run(function ($ionicPlatform) {
         url: {
 //            mall: "http://172.16.130.43:8086/credit"
 //            mall: "http://10.10.68.11:8080/credit"
-//            mall: "/PointsMall-/www/data"
-            mall: "/credit"
+            mall: "/PointsMall-/www/data"
+//            mall: "/credit"
         }
     })

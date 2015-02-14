@@ -1,4 +1,4 @@
-PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$scope,$rootScope,Util,MallSev){
+PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$scope,$rootScope,MallSev){
 
     $scope.posts = [];
 
@@ -11,6 +11,8 @@ PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$s
 
 
     $scope.isSubmit = false;
+
+
 
     //获得商品详情
     $scope.getDetail = function(obj){
