@@ -64,7 +64,6 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$ionicPopup,$sco
                     $scope.isSubmit = false;
                 });
 
-                $state.go("mall.exchange");
 
             } else {
             }

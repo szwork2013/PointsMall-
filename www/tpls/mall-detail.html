@@ -59,14 +59,13 @@
     <div class="detail-change clearfix" style="position: fixed; bottom: 0px; width: 100%;">
         <div class="pull-left">
             <span class="color-og pointMs">
-                <i class="ib point" style="margin-right: 8px;"></i>
-                <span class="ib t2">{{post.credit}}</span>
+                <i class="ib point t2" style="margin-right: 8px;"></i>
+                <span class="ib ">{{post.credit}}</span>
             </span>
         </div>
 
         <div class="pull-right">
-            <!--<button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  ng-disabled="notExchange">-->
-            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  >
+            <button class="button button-energized ca-sm" ng-click="$root.go('mall.input')"  ng-disabled="notExchange">
                 {{isExchangeMsg}}
             </button>
         </div>
