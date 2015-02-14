@@ -258,15 +258,15 @@ button:disabled{
   border:  0 none;
   border-top: 1px solid #c6cbce;
   border-bottom: 1px solid #c6cbce;
-
-  padding: 0 rem(30px);
-  background: #ffffff;
+  padding: rem(22px) rem(30px);
   height: rem(90px);
-  line-height: rem(90px);
+
+
+  background: #ffffff;
   width: 100%;
   border-radius: 0;
-  box-shadow: 0;
-  -webkit-box-shadow : 0;
+  box-shadow: none;
+  -webkit-box-shadow : none;
   outline: 0 none;
 
 }

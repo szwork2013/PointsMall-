@@ -2,40 +2,37 @@
 
 <ion-view  view-title="知了商城">
 
-
-        <ion-nav-buttons>
-            <button class="button button-icon icon ion-ios7-arrow-back"  ng-click="$root.goCicadaBack();">  </button>
-        </ion-nav-buttons>
+            <div class="bar bar-header bar-positive  ">
+                <button class="button button-icon icon ion-ios7-arrow-back"     ng-click="$root.goCicadaBack();">  </button>
+                <h1 class="title">知了商城</h1>
+            </div>
 
     <!-- slide box -->
-    <ion-slide-box  class="has-header"
-            on-slide-changed="slideChanged($index)"
-            scroll="true"
-            show-pager='true'
-            slide-interval="3000"
-            auto-play="false">
-        <ion-slide>
-            <div>
-                <a  class="block" >
-                    <img class="full-image" src="img/banner/banner01.jpg" >
-                </a>
-            </div>
-        </ion-slide>
+    <!--<ion-slide-box  class="has-header"-->
+                    <!--scroll="true"-->
+                    <!--show-pager='true'>-->
+        <!--<ion-slide>-->
+            <!--<div>-->
+                <!--<a  class="block" >-->
+                    <!--<img class="full-image" src="img/banner/banner01.jpg" >-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</ion-slide>-->
 
-        <ion-slide>
-            <div>
-                <a  class="block">
-                    <img class="full-image" src="img/banner/banner01.jpg" >
-                </a>
-            </div>
-        </ion-slide>
+        <!--<ion-slide>-->
+            <!--<div>-->
+                <!--<a  class="block">-->
+                    <!--<img class="full-image" src="img/banner/banner01.jpg" >-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</ion-slide>-->
 
-    </ion-slide-box>
+    <!--</ion-slide-box>-->
     <!-- slide box -->
 
-    <!--<div class="has-header pos-rel">-->
-        <!--<img   src="img/banner/banner01.jpg" class="full-image" />-->
-    <!--</div>-->
+    <div class="has-header pos-rel">
+        <img   src="img/banner/banner01.jpg" class="full-image" />
+    </div>
     <!--内容区-->
     <ion-content   class="has-header"    ng-style="{'marginTop':bannerHeight+'px'}">
 

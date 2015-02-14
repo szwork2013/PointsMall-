@@ -185,14 +185,13 @@ button:disabled {
   border: 0 none;
   border-top: 1px solid #c6cbce;
   border-bottom: 1px solid #c6cbce;
-  padding: 0 15px;
-  background: #ffffff;
+  padding: 11px 15px;
   height: 45px;
-  line-height: 45px;
+  background: #ffffff;
   width: 100%;
   border-radius: 0;
-  box-shadow: 0;
-  -webkit-box-shadow: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
   outline: 0 none; }
 
 .form-tips {
