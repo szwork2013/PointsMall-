@@ -84,7 +84,7 @@ PointMall
                     "data" : {
                         "token" : token,
                         "productionId" : productionId,
-                        "coment" : phone
+                        "comment" : phone
                     }
                 }).success(function(res){
                     defer.resolve(res);

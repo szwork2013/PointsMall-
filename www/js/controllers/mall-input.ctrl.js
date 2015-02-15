@@ -12,8 +12,6 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$ionicPopup,$sco
 
 
 
-
-
     // A confirm dialog
     $scope.showConfirm = function(title,content) {
 
@@ -22,6 +20,13 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$ionicPopup,$sco
 
     //加载列表
     $scope.exchange = function(){
+
+        if(!isMobil($scope.fm.phone)){
+            $rootScope.alert("","请输入正确的手机号!");
+            return;
+        }
+
+
 
         //提示框
         var confirmPopup = $ionicPopup.confirm({
@@ -42,6 +47,14 @@ PointMall.controller("MallInputCtrl",function($state,$rootScope,$ionicPopup,$sco
             ]
         });
 
+
+
+        function isMobil(s)
+        {
+            var reg=/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+            if (!reg.exec(s)) return false
+            return true
+        }
 
         confirmPopup.then(function(res) {
             if(res) {

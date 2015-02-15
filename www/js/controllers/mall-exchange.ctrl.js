@@ -1,4 +1,4 @@
-PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$scope,$rootScope,MallSev){
+PointMall.controller("MallExchangeCtrl",function($state,$timeout,$stateParams,$scope,$rootScope,Util,MallSev){
 
     $scope.posts = [];
 
