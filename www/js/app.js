@@ -68,8 +68,8 @@ PointMall.run(function ($ionicPlatform) {
     .constant('SERVER', {
         url: {
 //            mall: "http://172.16.130.43:8086/credit"
-//            mall: "http://10.10.68.11:8080/credit"
+            mall: "http://10.10.68.11:8080/credit"
 //            mall: "/PointsMall-/www/data"
-            mall: "/credit"
+//            mall: "/credit"
         }
     })

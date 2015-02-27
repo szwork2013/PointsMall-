@@ -31,8 +31,32 @@ PointMall
                         $ionicHistory.goBack();
                     }
                 }
-            }
+            },
 
+            parseParams : function(paramsUrl){
+
+                    var  paramsArray  = paramsUrl.split("&");
+                    var  newParams = [];
+                    for(var i =0; i<paramsArray.length;i++){
+                        var objs = paramsArray[i].split("=");
+                        var tt = '{"'+objs[0]+'": "'+objs[1]+'" }';
+                        var newObj = JSON.parse(tt);
+                        newParams.push(newObj);
+                    }
+                return newParams;
+
+            },
+
+            getParam : function(key,array){
+                for(var i =0; i<array.length;i++){
+                    var objs = array[i];
+                    if(objs[key]){
+                        return  objs[key];
+                    }
+
+                }
+                return "";
+            }
         }
     })
 
