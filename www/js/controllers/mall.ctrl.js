@@ -19,7 +19,7 @@ PointMall.controller("MallCtrl", function ($state, $stateParams, $location, $sco
     }
 
 
-    alert(JSON.stringify(paramsUrl));
+   // alert(JSON.stringify(paramsUrl));
 
     $rootScope.isLoadingVal = false;
 //        $rootScope.token = "251ad9b65d4a79fcd2d09a244f01ea8a";
